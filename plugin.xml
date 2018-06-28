@@ -23,10 +23,9 @@
         version="1.0.0">
     <name>HideScrollbar</name>
     <description>Hide scrollbars on iOS</description>
-    <license>Apache 2.0</license>
     <keywords>cordova,scrollbar,ios</keywords>
     <author>Tommy Lacroix, NuageLab</author>
-    <license>Apache 2.0</license>
+    <license>Apache-2.0</license>
 
     <repo>https://github.com/tlacroix/cordova-plugin-hidescrollbar.git</repo>
     <issue>https://github.com/tlacroix/cordova-plugin-hidescrollbar/issues</issue>

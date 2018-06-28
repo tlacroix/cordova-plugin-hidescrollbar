@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-hidescrollbar",
+  "version": "1.0.0",
+  "description": "Very basic plugin to hide scrollbar in a Cordova app.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlacroix/cordova-plugin-hidescrollbar.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova"
+    "scrollbar",
+    "cordova-ios",
+    "ios"
+  ],
+  "author": "Tommy Lacroix, NuageLab",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/tlacroix/cordova-plugin-hidescrollbar/issues"
+  },
+  "homepage": "https://github.com/tlacroix/cordova-plugin-hidescrollbar#readme"
+}
