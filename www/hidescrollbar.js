@@ -25,10 +25,6 @@ var argscheck = require('cordova/argscheck'),
     exec = require('cordova/exec'),
     cordova = require('cordova');
 
-channel.createSticky('onCordovaInfoReady');
-// Tell cordova channel to wait on the CordovaInfoReady event
-channel.waitForInitialization('onCordovaInfoReady');
-
 /**
  * This represents the mobile device, and provides properties for inspecting the model, version, UUID of the
  * phone, etc.
@@ -37,21 +33,44 @@ channel.waitForInitialization('onCordovaInfoReady');
 function HideScrollbar() {
     var me = this;
 
-    channel.onCordovaReady.subscribe(function() {
-        cordova.hideScrollbars = me.hideScrollbars;
-        channel.onCordovaInfoReady.fire();
-    });
+    //channel.onCordovaReady.subscribe(function() {
+        //
+    //});
 }
 
 /**
- * Hide scrollbar
+ * Hide scrollbars
  *
  * @param {Function} successCallback The function to call when the heading data is available
  * @param {Function} errorCallback The function to call when there is an error getting the heading data. (OPTIONAL)
  */
-HideScrollbar.prototype.hideScrollbars = function(successCallback, errorCallback) {
+HideScrollbar.prototype.hide = function(successCallback, errorCallback) {
+    if (typeof successCallback == 'undefined') successCallback = function(){};
     argscheck.checkArgs('fF', 'HideScrollbar.hideScrollbars', arguments);
     exec(successCallback, errorCallback, "HideScrollbar", "hideScrollbars", []);
 };
+/**
+ *
+ * Show scrollbars
+ *
+ * @param {Function} successCallback The function to call when the heading data is available
+ * @param {Function} errorCallback The function to call when there is an error getting the heading data. (OPTIONAL)
+ */
+HideScrollbar.prototype.show = function(successCallback, errorCallback) {
+    if (typeof successCallback == 'undefined') successCallback = function(){};
+    argscheck.checkArgs('fF', 'HideScrollbar.showScrollbars', arguments);
+    exec(successCallback, errorCallback, "HideScrollbar", "showScrollbars", []);
+};
+
+/*var hidescrollbar = {
+    hide: function(successCallback, errorCallback) {
+        argscheck.checkArgs('fF', 'HideScrollbar.hideScrollbars', arguments);
+        exec(successCallback, errorCallback, "HideScrollbar", "hideScrollbars", []);
+    },
+    show: function(successCallback, errorCallback) {
+        argscheck.checkArgs('fF', 'HideScrollbar.showScrollbars', arguments);
+        exec(successCallback, errorCallback, "HideScrollbar", "hideScrollbars", []);
+    }
+};*/
 
 module.exports = new HideScrollbar();

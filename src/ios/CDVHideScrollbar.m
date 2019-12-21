@@ -36,4 +36,14 @@
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
+- (void)showScrollbars:(CDVInvokedUrlCommand*)command
+{
+    self.webView.scrollView.showsVerticalScrollIndicator = YES;
+    self.webView.scrollView.showsHorizontalScrollIndicator = YES;
+
+    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
 @end

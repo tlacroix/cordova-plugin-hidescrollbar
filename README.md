@@ -2,14 +2,24 @@
 
 Very basic plugin to hide scrollbar in a Cordova app.
 
-This is still incomplete and in alpha stage.
-
 # Supported platforms
 
 - iOS
 
 # How to use
 
-The development is still in progress to provide a simpler interface. For now:
+To hide the scrollbar:
 
-```cordova.exec(function(){}, function(){}, "HideScrollbar", "hideScrollbars", []);```
+```
+plugins.hideScrollbar.hide(function(){
+    // Success
+});
+```
+
+To show the scrollbar:
+
+```
+plugins.hideScrollbar.show(function(){
+    // Success
+});
+```

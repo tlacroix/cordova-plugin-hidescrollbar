@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-hidescrollbar",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Very basic plugin to hide scrollbar in a Cordova app.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
   },
   "keywords": [
     "ecosystem:cordova",
-    "cordova"
+    "cordova",
     "scrollbar",
     "cordova-ios",
     "ios"

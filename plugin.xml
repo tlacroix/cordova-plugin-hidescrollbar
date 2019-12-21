@@ -20,7 +20,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="cordova-plugin-hidescrollbar"
-        version="1.0.0">
+        version="1.0.2">
     <name>HideScrollbar</name>
     <description>Hide scrollbars on iOS</description>
     <keywords>cordova,scrollbar,ios</keywords>
@@ -30,9 +30,9 @@
     <repo>https://github.com/tlacroix/cordova-plugin-hidescrollbar.git</repo>
     <issue>https://github.com/tlacroix/cordova-plugin-hidescrollbar/issues</issue>
 
-    <!--<js-module src="www/hidescrollbar.js" name="hidescrollbar">
-        <clobbers target="hidescrollbar" />
-    </js-module>-->
+    <js-module src="www/hidescrollbar.js" name="hidescrollbar">
+        <clobbers target="plugins.hideScrollbar" />
+    </js-module>
 
     <!-- ios -->
     <platform name="ios">

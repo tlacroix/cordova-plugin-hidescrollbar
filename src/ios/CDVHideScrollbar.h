@@ -24,5 +24,6 @@
 {}
 
 - (void)hideScrollbar:(CDVInvokedUrlCommand*)command;
+- (void)showScrollbar:(CDVInvokedUrlCommand*)command;
 
 @end
