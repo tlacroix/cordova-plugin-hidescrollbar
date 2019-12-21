@@ -1,14 +1,27 @@
 # cordova-plugin-hidescrollbar
 
-Very basic plugin to hide scrollbar in a Cordova app.
+This plugin allows you to hide the scrollbar in an iOS app.
 
-# Supported platforms
+```
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    plugins.hideScrollbar.hide(function(){
+        // Success
+    });
+}
+```
+
+## Supported platforms
 
 - iOS
 
-# How to use
+## Installation
 
-To hide the scrollbar:
+    cordova plugin add cordova-plugin-hidescrollbar
+
+## Examples
+
+### Hide the scrollbar
 
 ```
 plugins.hideScrollbar.hide(function(){
@@ -16,10 +29,10 @@ plugins.hideScrollbar.hide(function(){
 });
 ```
 
-To show the scrollbar:
+### Show the scrollbar
 
 ```
-plugins.hideScrollbar.show(function(){
+plugins.showScrollbar.hide(function(){
     // Success
 });
 ```
